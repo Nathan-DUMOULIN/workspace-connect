@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation de Salles</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css"> 
+</head>
 <body>
 
 <header>
@@ -38,7 +39,7 @@
                 <p class="description">Salle moderne idéale pour réunions et séminaires.</p>
                 
                 <div class="footer-card">
-                    <a href="reservation.php?id=1" class="btn-discover">Découvrir ce lieu</a>
+                    <a href="reservation.php" class="btn-discover">Découvrir ce lieu</a>
                 </div>
             </div>
         </article>
@@ -56,7 +57,7 @@
                 <p class="description">Grande salle lumineuse parfaite pour conférences.</p>
                 
                 <div class="footer-card">
-                    <a href="reservation.php?id=2" class="btn-discover">Découvrir ce lieu</a>
+                    <a href="reservation.php" class="btn-discover">Découvrir ce lieu</a>
                 </div>
             </div>
         </article>
