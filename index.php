@@ -18,7 +18,7 @@
         <li><a href="index.php">Accueil</a></li>
         <li><a href="salles.php">Nos salles</a></li>
         <li><a href="reservation.php">Réserver</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.php">Contact</a></li>
     </ul>
 </nav>
 
