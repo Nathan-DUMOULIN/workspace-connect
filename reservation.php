@@ -153,3 +153,5 @@ try {
     <button type="submit">Réserver</button>
 
 </form>
+
+<ul> <li><a href="index.php">Accueil</a></li></ul>
