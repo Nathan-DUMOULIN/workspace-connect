@@ -29,3 +29,5 @@ try {
         <?php endforeach; ?>
     <?php endif; ?>
 </div>
+
+<ul> <li><a href="index.php">Accueil</a></li></ul>
