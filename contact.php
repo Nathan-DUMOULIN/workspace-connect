@@ -156,3 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Envoyer le message</button>
 
 </form>
+
+<ul> <li><a href="index.php">Accueil</a></li></ul>
+
+         
