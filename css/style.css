@@ -1,0 +1,673 @@
+/* ============================================================
+   WORKSPACE CONNECT — style.css
+   Responsive, moderne, inspiré de Kactus
+   ============================================================ */
+
+/* ── Variables ───────────────────────────────────────────── */
+:root {
+  --clr-bg:          #F7F6F2;
+  --clr-surface:     #FFFFFF;
+  --clr-border:      #E4E1D8;
+  --clr-accent:      #2D6A4F;
+  --clr-accent-lt:   #E8F4EE;
+  --clr-accent-dk:   #1B4332;
+  --clr-text-1:      #1A1A1A;
+  --clr-text-2:      #5A5A5A;
+  --clr-text-3:      #9A9A9A;
+  --clr-tag-bg:      #F0EDE4;
+  --clr-tag-txt:     #4A4535;
+  --clr-danger:      #C0392B;
+  --clr-danger-lt:   #FDECEA;
+  --clr-success:     #1B4332;
+  --clr-success-lt:  #D4EDDA;
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill:999px;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+  --shadow-hover:0 4px 20px rgba(0,0,0,.12);
+
+  --nav-h: 64px;
+  --max-w: 1200px;
+  --gap:   28px;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text-1);
+  font-size: 16px;
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img { display: block; max-width: 100%; height: auto; }
+a   { color: inherit; text-decoration: none; }
+ul  { list-style: none; }
+
+/* ── Typography ──────────────────────────────────────────── */
+h1 { font-size: clamp(1.75rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
+h2 { font-size: clamp(1.25rem, 3vw, 1.9rem); font-weight: 600; line-height: 1.3; }
+h3 { font-size: 1.1rem; font-weight: 600; }
+p  { color: var(--clr-text-2); }
+
+/* ── Header ──────────────────────────────────────────────── */
+header {
+  background: var(--clr-surface);
+  border-bottom: 1px solid var(--clr-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-h);
+}
+header .header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+header a.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-accent-dk);
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+header a.logo span {
+  color: var(--clr-accent);
+}
+
+/* ── Nav ─────────────────────────────────────────────────── */
+nav ul {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+nav ul li a {
+  display: block;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--clr-text-2);
+  transition: background .15s, color .15s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--clr-accent-lt);
+  color: var(--clr-accent-dk);
+}
+/* CTA nav */
+nav ul li.nav-cta a {
+  background: var(--clr-accent);
+  color: #fff;
+  padding: 7px 18px;
+}
+nav ul li.nav-cta a:hover {
+  background: var(--clr-accent-dk);
+  color: #fff;
+}
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none; border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--clr-text-1);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+
+/* ── Hero / Page Banner ──────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--clr-accent-dk) 0%, var(--clr-accent) 100%);
+  color: #fff;
+  padding: clamp(48px, 10vw, 96px) 24px;
+  text-align: center;
+}
+.hero h1 { color: #fff; margin-bottom: .5rem; }
+.hero p   { color: rgba(255,255,255,.8); font-size: 1.1rem; max-width: 560px; margin: 0 auto 2rem; }
+.hero .btn-hero {
+  display: inline-block;
+  background: #fff;
+  color: var(--clr-accent-dk);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: .95rem;
+  transition: transform .2s, box-shadow .2s;
+}
+.hero .btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.2);
+}
+
+/* Page header (sous-pages) */
+.page-header {
+  background: var(--clr-surface);
+  border-bottom: 1px solid var(--clr-border);
+  padding: 32px 24px 24px;
+  text-align: center;
+}
+.page-header h1 { font-size: clamp(1.4rem, 3.5vw, 2rem); }
+.page-header p   { margin-top: .4rem; font-size: .95rem; }
+
+/* ── Container ───────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+  flex: 1;
+}
+main { padding: 48px 0; }
+
+/* ── Section heading ─────────────────────────────────────── */
+.section-heading {
+  margin-bottom: 32px;
+}
+.section-heading h2 { margin-bottom: .35rem; }
+.section-heading p  { font-size: .95rem; }
+
+/* ── Grille de salles ────────────────────────────────────── */
+.grille-salles,
+#salles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--gap);
+}
+/* On masque le h2 "Nos salles disponibles" si besoin (il est dans #salles) */
+#salles > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+}
+
+/* ── Card Salle ──────────────────────────────────────────── */
+.salle-card,
+.card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s, transform .2s;
+  box-shadow: var(--shadow-card);
+}
+.salle-card:hover,
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* Image */
+.salle-image,
+.card > img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.salle-image img,
+.card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.salle-card:hover .salle-image img,
+.card:hover > img {
+  transform: scale(1.04);
+}
+
+/* Contenu card */
+.salle-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card { padding: 20px; }
+.card img { margin: -20px -20px 16px; width: calc(100% + 40px); max-width: none; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.tag {
+  background: var(--clr-tag-bg);
+  color: var(--clr-tag-txt);
+  font-size: .75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: .01em;
+}
+
+.salle-content h3,
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--clr-text-1);
+}
+.salle-content .info,
+.card p {
+  font-size: .85rem;
+  color: var(--clr-text-3);
+  margin-bottom: 8px;
+}
+.salle-content .description {
+  font-size: .9rem;
+  color: var(--clr-text-2);
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.footer-card {
+  margin-top: auto;
+}
+
+/* ── Boutons ─────────────────────────────────────────────── */
+.btn-discover,
+.card a {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: #fff !important;
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  font-size: .875rem;
+  font-weight: 600;
+  transition: background .15s, transform .15s;
+  border: none;
+  cursor: pointer;
+}
+.btn-discover:hover,
+.card a:hover {
+  background: var(--clr-accent-dk);
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--clr-accent) !important;
+  border: 1.5px solid var(--clr-accent);
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  font-size: .875rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background .15s, color .15s;
+}
+.btn-secondary:hover {
+  background: var(--clr-accent-lt);
+}
+
+/* ── Salle détail (salle.php) ────────────────────────────── */
+.salle-detail {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.salle-detail figure {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: var(--clr-border);
+}
+.salle-detail figure img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+}
+.salle-detail figcaption {
+  font-size: .85rem;
+  color: var(--clr-text-3);
+  padding: 10px 16px;
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border);
+}
+.salle-detail h1 { margin-bottom: 16px; }
+.salle-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.salle-meta span {
+  background: var(--clr-accent-lt);
+  color: var(--clr-accent-dk);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: .875rem;
+  font-weight: 600;
+}
+.salle-detail .description {
+  font-size: 1rem;
+  color: var(--clr-text-2);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+.salle-detail .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ── Formulaires ─────────────────────────────────────────── */
+.form-wrapper {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 5vw, 48px);
+  max-width: 680px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--clr-text-1);
+  margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  font-size: .95rem;
+  color: var(--clr-text-1);
+  background: var(--clr-bg);
+  transition: border-color .15s, box-shadow .15s;
+  font-family: inherit;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 0 3px rgba(45,106,79,.15);
+  background: #fff;
+}
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A5A5A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+/* Submit bouton */
+button[type="submit"],
+.form-wrapper button {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, transform .15s;
+  font-family: inherit;
+  width: 100%;
+  margin-top: 4px;
+}
+button[type="submit"]:hover {
+  background: var(--clr-accent-dk);
+  transform: translateY(-1px);
+}
+
+/* ── Alertes ─────────────────────────────────────────────── */
+.alert {
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: .9rem;
+  border-left: 4px solid;
+}
+.alert ul { padding-left: 16px; list-style: disc; margin-top: 6px; }
+.alert li { margin-bottom: 4px; }
+
+.alert-success {
+  background: var(--clr-success-lt);
+  border-color: var(--clr-success);
+  color: var(--clr-success);
+}
+.alert-error {
+  background: var(--clr-danger-lt);
+  border-color: var(--clr-danger);
+  color: var(--clr-danger);
+}
+
+/* ── Page confirmation ───────────────────────────────────── */
+.confirmation-box {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+.confirmation-box .check-icon {
+  width: 60px; height: 60px;
+  background: var(--clr-accent-lt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.6rem;
+}
+.confirmation-box h1 { font-size: 1.6rem; margin-bottom: .4rem; }
+.confirmation-box > p { margin-bottom: 24px; }
+
+.recap {
+  background: var(--clr-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border);
+  padding: 16px 20px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.recap h2 {
+  font-size: .875rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--clr-text-3);
+  margin-bottom: 12px;
+}
+.recap ul { display: flex; flex-direction: column; gap: 8px; }
+.recap li {
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+  gap: 12px;
+}
+.recap li span:first-child { color: var(--clr-text-3); }
+.recap li span:last-child  { font-weight: 600; color: var(--clr-text-1); text-align: right; }
+
+.confirmation-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Contact layout ──────────────────────────────────────── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact-info h2 { margin-bottom: 12px; }
+.contact-info p  { font-size: .9rem; margin-bottom: 20px; }
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: .875rem;
+}
+.contact-detail .icon {
+  width: 36px; height: 36px;
+  background: var(--clr-accent-lt);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: .9rem;
+}
+.contact-detail div span:first-child {
+  display: block;
+  font-weight: 600;
+  color: var(--clr-text-1);
+}
+.contact-detail div span:last-child {
+  color: var(--clr-text-2);
+}
+
+/* ── Nav breadcrumb (links au bas des pages) ─────────────── */
+/* On cible le ul en bas de contact.php, salles.php etc. */
+body > div.container + ul,
+.container ul:last-child,
+main > ul:last-child {
+  margin-top: 32px;
+}
+main > ul li a,
+.container > ul li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .875rem;
+  color: var(--clr-accent);
+  font-weight: 500;
+}
+main > ul li a::before,
+.container > ul li a::before {
+  content: '←';
+}
+main > ul li a:hover { text-decoration: underline; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer {
+  background: var(--clr-accent-dk);
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: 28px 24px;
+  font-size: .875rem;
+  margin-top: auto;
+}
+footer a { color: rgba(255,255,255,.85); }
+footer a:hover { color: #fff; text-decoration: underline; }
+
+/* ── Utilities ───────────────────────────────────────────── */
+.text-muted { color: var(--clr-text-3); }
+.mt-0 { margin-top: 0 !important; }
+.mb-16 { margin-bottom: 16px; }
+.mb-32 { margin-bottom: 32px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .grille-salles,
+  #salles {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  :root { --gap: 16px; }
+
+  /* Nav hamburger */
+  .nav-toggle { display: flex; }
+  nav {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--clr-surface);
+    border-bottom: 1px solid var(--clr-border);
+    padding: 12px 16px 16px;
+    display: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,.1);
+  }
+  nav.open { display: block; }
+  nav ul { flex-direction: column; gap: 2px; }
+  nav ul li a { padding: 10px 14px; font-size: 1rem; }
+
+  .grille-salles,
+  #salles {
+    grid-template-columns: 1fr;
+  }
+
+  .salle-card { flex-direction: column; }
+
+  .form-wrapper {
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .confirmation-box {
+    padding: 24px 16px;
+  }
+  .confirmation-actions { flex-direction: column; }
+  .confirmation-actions a,
+  .confirmation-actions .btn-secondary { width: 100%; text-align: center; }
+
+  .hero { padding: 48px 16px; }
+
+  .salle-detail .actions { flex-direction: column; }
+  .salle-detail .actions a,
+  .salle-detail .actions .btn-secondary { width: 100%; text-align: center; }
+
+  .recap li { flex-direction: column; gap: 2px; }
+  .recap li span:last-child { text-align: left; }
+}
+
+/* ── Print ───────────────────────────────────────────────── */
+@media print {
+  header, footer, nav, .btn-discover, button { display: none; }
+  body { font-size: 12pt; }
+  .confirmation-box { box-shadow: none; border: 1px solid #ccc; }
+}
