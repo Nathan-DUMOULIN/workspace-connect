@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/nav.css">
+  <title>Nos salles</title>
+  
+<nav class="navbar">
+    <ul>
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="salles.php">Nos salles</a></li>
+        <li><a href="reservation.php">Réserver</a></li>
+        <li><a href="contact.php" class="active">Contact</a></li>
+    </ul>
+</nav>
 <?php
 // Inclusion de la connexion PDO à la base de données
 require_once 'config/database.php';
@@ -153,10 +169,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <!-- Bouton de soumission du formulaire -->
-    <button type="submit">Envoyer le message</button>
+    <input type="submit" class="btn-form" value="Envoyer le message">
 
 </form>
-
-<ul> <li><a href="index.php">Accueil</a></li></ul>
 
          
