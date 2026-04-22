@@ -78,7 +78,7 @@ if ($id_salle > 0) {
 </div>
 
 <footer>
-    <p>&copy; <?= date('Y') ?> WorkSpace Connect</p>
+    <p>&copy; <?= date('Y') ?> NM WORKSPACE</p>
 </footer>
 
 </body>
