@@ -1,21 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation de Salles</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>NM WORKSPACE</title>
+    
 </head>
-<body>
+<body class="home">
 
 <header>
-    <h1>Réservation de Salles</h1>
-    <p>Trouvez la salle idéale pour vos événements</p>
+    <h1>NM WORKSPACE</h1>
+    
 </header>
 
-<nav>
+<nav class="navbar">
     <ul>
-        <li><a href="index.php">Accueil</a></li>
+        <li><a href="index.php" class="active">Accueil</a></li>
         <li><a href="salles.php">Nos salles</a></li>
         <li><a href="reservation.php">Réserver</a></li>
         <li><a href="contact.php">Contact</a></li>
@@ -24,63 +27,51 @@
 
 <div class="container">
     <main id="salles">
+
         <h2>Nos salles disponibles</h2>
 
-        <article class="salle-card">
-            <div class="salle-image">
+        <div id="accueil-salles">
+
+            <!-- Salle 1 -->
+            <article class="salle-card-home">
                 <img src="images/salle1.jpg" alt="Salle Horizon">
-            </div>
-            <div class="salle-content">
-                <div class="tags">
-                    <span class="tag">Moderne</span>
-                </div>
-                <h3>Salle Horizon</h3>
-                <p class="info">Capacité : 50 personnes | Prix : 120€ / jour</p>
-                <p class="description">Salle moderne idéale pour réunions et séminaires.</p>
-                
-                <div class="footer-card">
-                    <a href="reservation.php" class="btn-discover">Découvrir ce lieu</a>
-                </div>
-            </div>
-        </article>
 
-        <article class="salle-card">
-            <div class="salle-image">
-                <img src="images/salle2.jpg" alt="Salle Lumière">
-            </div>
-            <div class="salle-content">
-                <div class="tags">
-                    <span class="tag">Lumineux</span>
-                </div>
-                <h3>Salle Lumière</h3>
-                <p class="info">Capacité : 80 personnes | Prix : 180€ / jour</p>
-                <p class="description">Grande salle lumineuse parfaite pour conférences.</p>
-                
-                <div class="footer-card">
-                    <a href="reservation.php" class="btn-discover">Découvrir ce lieu</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                <div class="content">
+                    <h3>Salle Horizon</h3>
+                    <p>Capacité : 50 personnes | Prix : 120€ / Heure</p>
+                    <p>Salle moderne idéale pour réunions et séminaires.</p>
 
-    <aside class="sidebar">
-        <div class="filter-box">
-            <h3>Filtrer les lieux</h3>
-            <form action="index.php" method="GET">
-                <input type="number" name="participants" placeholder="Nombre de Participants">
-                <select name="type">
-                    <option value="">Type de lieu</option>
-                    <option value="hotel">Hôtel</option>
-                    <option value="chateau">Château</option>
-                </select>
-                <button type="submit" class="btn-search">Rechercher</button>
-            </form>
+                    <a href="reservation.php" class="btn-discover">
+                        Découvrir notre salle
+                    </a>
+                </div>
+            </article>
+
+            <!-- Salle 2 -->
+            <article class="salle-card-home">
+                <img src="images/salle4.jpg" alt="Salle Lumière">
+
+                <div class="content">
+                    <h3>Salle Lumière</h3>
+                    <p>Capacité : 80 personnes | Prix : 180€ / Heure</p>
+                    <p>Grande salle lumineuse parfaite pour conférences.</p>
+
+                    <a href="reservation.php" class="btn-discover">
+                        Découvrir notre salle
+                    </a>
+                </div>
+            </article>
+
         </div>
-    </aside>
+
+    </main>
+</div>
+
+    
 </div>
 
 <footer>
-    <p>© 2026 - Réservation de Salles</p>
+    <p>© 2026 - NM WORKSPACE</p>
 </footer>
 
 </body>
