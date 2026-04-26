@@ -30,13 +30,12 @@ if ($id_salle > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation confirmée</title>
 
-    <!-- IMPORTANT : même CSS que le reste du site -->
     <link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+
 <nav class="navbar">
     <ul>
         <li><a href="index.php">Accueil</a></li>
@@ -48,8 +47,6 @@ if ($id_salle > 0) {
 
 <h1>Réservation confirmée</h1>
 
-<!-- WRAPPER CENTRÉ (IMPORTANT POUR LE CSS) -->
-<div class="container">
 
     <div class="recap-container">
 
