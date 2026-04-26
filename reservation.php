@@ -156,7 +156,7 @@ try {
         <input type="number" name="nb_personnes" min="1" required>
     </div>
 
-    <button type="submit" class="btn-form">Réserver</button>
+   <input type="submit" class="btn-form" value="Réserver">
 
 </form>
 
