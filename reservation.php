@@ -2,7 +2,7 @@
 session_start();
 require_once 'config/database.php';
 
-$errors = [];
+$errors = []; 
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
