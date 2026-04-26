@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config/database.php';
+require_once 'config/database.php'; 
 
 $nom          = htmlspecialchars($_SESSION['nom'] ?? '');
 $prenom       = htmlspecialchars($_SESSION['prenom'] ?? '');
