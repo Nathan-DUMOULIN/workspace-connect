@@ -301,6 +301,13 @@ h1, h2 {
     box-shadow: 0 10px 25px rgba(59,130,246,0.5);
 }
 
+.alert {
+    background: #ef4444;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
 /* ===== FORMULAIRES (IMPORTANT) ===== */
 form {
@@ -410,31 +417,6 @@ header h1 {
         height: 200px;
     }
 
-/* ===== BOUTONS FORMULAIRES (FORCÉ) ===== */
-
-.btn-form {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-
-    padding: 12px 16px;
-    border: none;
-    border-radius: 10px;
-
-    cursor: pointer;
-    font-size: 0.95rem;
-
-    transition: 0.25s;
-    box-shadow: 0 8px 20px rgba(59,130,246,0.25);
-}
-
-.btn-form:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(59,130,246,0.5);
-}
-
-.btn-form:active {
-    transform: scale(0.97);
-}
 
 /* ===== MESSAGE RECAPITULATIF (CARDS CENTRÉES) ===== */
 
