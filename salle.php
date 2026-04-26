@@ -70,7 +70,6 @@ $salle = $stmt->fetch(PDO::FETCH_ASSOC);
 
     </div>
 
-    <!-- DESCRIPTION -->
     <div class="salle-description">
         <p><?= nl2br(htmlspecialchars($salle['description'])) ?></p>
     </div>
@@ -78,7 +77,7 @@ $salle = $stmt->fetch(PDO::FETCH_ASSOC);
 </main>
 
 <footer>
-    <p>© 2026 - NM WORKSPACE</p>
+    <p>© WORKSPACE CONNECT</p>
 </footer>
 
 </body>
