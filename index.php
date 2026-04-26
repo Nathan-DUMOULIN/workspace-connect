@@ -68,10 +68,10 @@
 </div>
 
     
-</div>
+
 
 <footer>
-    <p>© 2026 - NM WORKSPACE</p>
+    <p>© WORKSPACE CONNECT</p>
 </footer>
 
 </body>
