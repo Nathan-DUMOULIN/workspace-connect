@@ -21,7 +21,7 @@ try {
 }
 ?>
 
-<!-- NAVBAR -->
+
 <nav class="navbar">
     <ul>
         <li><a href="index.php">Accueil</a></li>
@@ -31,7 +31,6 @@ try {
     </ul>
 </nav>
 
-<!-- GRILLE -->
 <div class="grille-salles">
 
 <?php if (empty($salles)) : ?>
@@ -42,13 +41,12 @@ try {
 
         <div class="card">
             
-            <!-- IMAGE -->
+            
             <img 
                 src="images/<?= htmlspecialchars($salle['image']) ?>" 
                 alt="<?= htmlspecialchars($salle['nom']) ?>"
             >
 
-            <!-- CONTENU OVERLAY -->
             <div class="card-content">
                 <h3><?= htmlspecialchars($salle['nom']) ?></h3>
 
