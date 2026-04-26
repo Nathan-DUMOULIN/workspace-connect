@@ -48,6 +48,8 @@ if ($id_salle > 0) {
 <h1>Réservation confirmée</h1>
 
 
+<div class="container">
+
     <div class="recap-container">
 
         <h2>Récapitulatif de votre réservation</h2>
@@ -75,7 +77,7 @@ if ($id_salle > 0) {
 </div>
 
 <footer>
-    <p>&copy; <?= date('Y') ?> NM WORKSPACE</p>
+    <p>&copy; <?= date('Y') ?> WORKSPACE CONNECT</p>
 </footer>
 
 </body>
