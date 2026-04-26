@@ -4,7 +4,7 @@ require_once 'config/database.php';
 
 $errors = [];
 
-/* ===== TRAITEMENT FORMULAIRE ===== */
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nom          = trim($_POST['nom'] ?? '');
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-/* ===== SALLES ===== */
+
 try {
     $stmt = $pdo->query("SELECT id_salle, nom, capacite FROM salle ORDER BY nom ASC");
     $salles = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -80,7 +80,7 @@ try {
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
+
 <nav class="navbar">
     <ul>
         <li><a href="index.php">Accueil</a></li>
@@ -94,7 +94,7 @@ try {
 
 <div class="container">
 
-<!-- ===== ERREURS ===== -->
+
 <?php if (!empty($errors)) : ?>
     <div class="alert">
         <ul>
@@ -105,7 +105,7 @@ try {
     </div>
 <?php endif; ?>
 
-<!-- ===== FORMULAIRE ===== -->
+
 <form method="POST" action="reservation.php">
 
     <div class="form-group">
